@@ -1,0 +1,170 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+body, html{
+    overflow-x: hidden; /*Отображаем отображением блочного элемента по горизонтали если конент не помещается*/
+}
+nav{
+    margin: auto;
+    max-width: 1100px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+}
+.header-img{
+    background-image: url(../img/background-header.png);
+    height: 1103px;
+}
+.wrapper{
+    width: 75%;
+    margin: 0 auto;
+}
+#checkbox-menu,
+.toggle{
+    display: none;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 115px;
+
+}
+header img{
+margin-right: 15%;
+}
+.menu{
+    padding: 0;
+    margin: 0;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    list-style-type: none;
+
+}
+.menu ul{
+    margin-right: auto;
+}
+.menu li a{
+
+    font-size: 18px;
+    color: #ffffff;
+    text-decoration: none;
+    /*margin-right: 50px;*/
+    padding-bottom: 45px;
+    margin: 20px;
+}
+nav a:hover{
+    border-bottom: 4px solid #11749e;
+
+}
+i:hover{
+    opacity: 0.7;
+}
+.social-icons{
+    display: flex;
+}
+.social-icons i{
+    font-size: 18px;
+    color: #ffffff;
+    /*padding-left: 45px;*/
+    margin: 20px;
+}
+hr {
+    border: none;
+    border-top: 1px solid #7b7b7b;
+
+}
+.header-img h1{
+
+    color: white;
+    font-size: 110px;
+    text-align: center;
+    padding-top: 275px;
+}
+.header-img p{
+
+    color: #11749e;
+    font-size: 18px;
+    text-align: center;
+    font-stretch: semi-expanded;
+    letter-spacing: 13px;
+
+}
+
+@media screen and (max-width: 1400px){
+    header img{
+        margin-right: 10px;
+    }
+   .menu li a{
+        font-size: 14px;
+    }
+    .social-icons i{
+        margin: 10px;
+        font-size: 14px;
+    }
+}
+@media screen and (max-width: 1015px) {
+    .toggle{
+        display: block;
+        text-align: center;
+        font-size: 18px;
+        line-height: 40px;
+        color: black;
+        background: #11749e;
+        width: 200px;
+
+    }
+    nav{
+        margin-top: 40px;
+    }
+    #checkbox-menu:checked + label .touch li{
+        opacity: 1;
+        visibility: visible;
+        transition: all .7s linear;
+        text-align: center;
+        align-items: center;
+    }
+    #checkbox-menu:checked + label .touch li a{
+        margin: 0;
+        padding: 0;
+    }
+    #checkbox-menu:checked + label .touch{
+
+        position:relative;
+        height: 250px;
+        align-items: center;
+        background-color: #7b7b7b;
+        opacity: 0.8;
+        transition: all .3s linear;
+        width: 100%;
+    }
+    .menu{
+
+        display: flex;
+        flex-direction: column;
+        height: 0;
+        transition: all .3s linear;
+    }
+    .menu li{
+
+        opacity: 0;
+        visibility: hidden;
+
+    }
+    menu li a{
+
+
+    }
+    nav a:hover{
+    border-bottom: none;
+        color: #11749e;
+
+    }
+
+}
